@@ -17,3 +17,8 @@ spring:
     show-sql: true
   profiles:
     active: dev  
+ 
+ girl:
+  name: lili
+  age: 18
+    
