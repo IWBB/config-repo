@@ -20,7 +20,7 @@ spring:
  
 girl:
   name: lili
-  age: 101
+  age: 110
   
 management:
   endpoints:
