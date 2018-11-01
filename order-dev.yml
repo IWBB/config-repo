@@ -22,9 +22,15 @@ girl:
   name: lili
   age: 110
   
+spring:
+  cloud:
+    bus:
+      enabled: true
+    trace:
+      enabled: true
 management:
   endpoints:
     web:
       exposure:
-        include:  "*"  
+        include: bus-refresh 
     
