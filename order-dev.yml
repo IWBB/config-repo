@@ -21,4 +21,10 @@ spring:
 girl:
   name: lili
   age: 36
+  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh  
     
