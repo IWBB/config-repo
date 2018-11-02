@@ -17,18 +17,7 @@ spring:
     show-sql: true
   profiles:
     active: dev 
-  cloud:
-    bus:
-      enabled: true
-      trace:
-        enabled: true   
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
- 
 girl:
   name: lili
   age: 19
