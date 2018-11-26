@@ -6,9 +6,11 @@ ribbon:
   ConnectTimeout: 30000
   
 zuul:
-    host:
-        connect-timeout-millis: 30000
-        socket-timeout-millis: 30000
+  host:
+    max-per-route-connections: 30000
+    max-total-connections: 30000
+  semaphore:
+    max-semaphores: 30000
  
 hystrix:
     command:
