@@ -11,11 +11,9 @@ zuul:
         socket-timeout-millis: 30000
  
 hystrix:
-  metrics:
-    enabled: true
-    command: 
-  default: 
-   execution: 
-    isolation: 
-     thread: 
-       timeoutInMilliseconds: 12000
+    command:
+        default:
+            execution:
+                isolation:
+                    thread:
+                        timeout-in-milliseconds: 3000
