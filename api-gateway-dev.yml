@@ -1,7 +1,21 @@
-spring:
-  application:
-    name: api-gateway
-  profiles:
-    active: dev
 server:
   port: 8083
+
+ribbon:
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
+  
+zuul:
+    host:
+        connect-timeout-millis: 30000
+        socket-timeout-millis: 30000
+ 
+hystrix:
+  metrics:
+    enabled: true
+    command: 
+  default: 
+   execution: 
+    isolation: 
+     thread: 
+       timeoutInMilliseconds: 12000
