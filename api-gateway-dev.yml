@@ -18,7 +18,7 @@ hystrix:
             execution:
                 isolation:
                     thread:
-                        timeout-in-milliseconds: 3000
+                        timeout-in-milliseconds: 30000
 
 management:
   endpoints:
