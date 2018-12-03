@@ -1,29 +1,22 @@
 server:
   port: 8083
-
-ribbon:
-  ReadTimeout: 30000
-  ConnectTimeout: 30000
   
 zuul:
-    host:
-        connect-timeout-millis: 10000
-        socket-timeout-millis: 60000
- 
-hystrix:
-    command:
-        default:
-            execution:
-                isolation:
-                    thread:
-                        timeout-in-milliseconds: 30000
-
+  routes:
+    api-gateway:
+      path: /myProduct/**
+      service-id: product
+      #设置cookies可以传递
+      sensitive-headers: 
+  #简洁写法
+#    product: /myProduct/**
+  #排除某些路由
+  ignored-patterns:
+    - /**/product/listForOrder
 management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-               
-eureka:
-  instance:
-    prefer-ip-address: true
+  security:
+    enabled: false
+spring:
+  redis:
+    host: 192.168.1.146
+    port: 6379
