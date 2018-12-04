@@ -2,6 +2,9 @@ server:
   port: 8083
   
 zuul:
+  host:
+      connect-timeout-millis: 3000
+      socket-timeout-millis: 3000
   sensitive-headers: 
   routes:
     api-gateway:
@@ -25,12 +28,7 @@ spring:
 ribbon:  
   ReadTimeout: 3000
   ConnectTimeout: 3000
-
-zuul:
-    host:
-        connect-timeout-millis: 3000
-        socket-timeout-millis: 3000
- 
+  
 hystrix:
     command:
         default:
